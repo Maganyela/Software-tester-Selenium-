@@ -33,7 +33,8 @@ public class LoginPageTest extends BasePage {
         Thread.sleep(3000);
         searchHotelPage.clickSubmitBtn();
         Thread.sleep(4000);
-
+        selectHotelPage.clickSelectHotelRadiobtn();
+        Thread.sleep(4000);
     }
 
 

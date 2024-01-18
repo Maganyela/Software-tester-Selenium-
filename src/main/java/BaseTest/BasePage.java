@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import PageObject.LoginPage;
 import PageObject.SearchHotelPage;
+import PageObject.SelectHotelPage;
 import Utils.TestUtil;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +26,7 @@ public class BasePage {
 
     protected static LoginPage loginPage;
     protected static SearchHotelPage searchHotelPage;
+    protected static SelectHotelPage selectHotelPage;
     public BasePage(){
         try {
             prop = new Properties();
