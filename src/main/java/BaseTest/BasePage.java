@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import PageObject.BookHotelPage;
 import PageObject.LoginPage;
 import PageObject.SearchHotelPage;
+import PageObject.SelectHotelPage;
 import Utils.TestUtil;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -25,11 +27,13 @@ public class BasePage {
 
     protected static LoginPage loginPage;
     protected static SearchHotelPage searchHotelPage;
+    protected static SelectHotelPage selectHotelPage;
+    protected  static BookHotelPage bookHotelPage;
     public BasePage(){
         try {
             prop = new Properties();
 
-            FileInputStream ip = new FileInputStream("C:\\Users\\DELL\\Downloads\\USSDJavaApplication-Master\\AdactinHotelApp\\src\\main\\" +
+            FileInputStream ip = new FileInputStream("C:\\Myproject\\Software-tester-Selenium-\\src\\main\\" +
                     "java\\Config\\config.properties");
             prop.load(ip);
 
@@ -59,7 +63,8 @@ public class BasePage {
         driver.get("https://adactinhotelapp.com/index.php");
         loginPage = new LoginPage(driver);
         searchHotelPage = new SearchHotelPage(driver);
-
+        selectHotelPage = new SelectHotelPage(driver);
+        bookHotelPage
     }
 
     @AfterTest

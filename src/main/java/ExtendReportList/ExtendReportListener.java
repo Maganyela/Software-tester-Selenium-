@@ -44,7 +44,6 @@ public class ExtendReportListener implements IReporter{
 
     private void buildTestNodes(IResultMap tests, LogStatus status) {
         ExtentTest test;
-
         if (tests.size() > 0) {
             for (ITestResult result : tests.getAllResults()) {
                 test = extent.startTest(result.getMethod().getMethodName());
